@@ -1,0 +1,29 @@
+### Create new user
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password":"password",
+    "test":"test"
+}
+
+### Get user
+GET http://localhost:3000/users/4
+
+
+### Get users by email
+GET http://localhost:3000/users?email=user@gmail.com
+
+
+### Remove user
+DELETE  http://localhost:3000/users/2
+
+### Update user
+PATCH   http://localhost:3000/users/3
+Content-Type: application/json
+
+{
+    "email": "usertest@gmail.com",
+    "password":"password123"
+}
