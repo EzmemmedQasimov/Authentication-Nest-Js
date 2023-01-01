@@ -13,10 +13,10 @@ export class UsersService {
     return this.repo.save(user);
   }
 
-   async findOne(id: number) {
+  async findOne(id: number) {
+    if (!id) return null;
     const user = await this.repo.findOneBy({ id });
-    console.log(user);
-    
+
     if (!user) {
       throw new NotFoundException('user not found');
     }

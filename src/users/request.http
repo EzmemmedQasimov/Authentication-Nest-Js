@@ -1,26 +1,41 @@
-### Create new user
-POST http://localhost:3000/users/signup
+### Login user
+POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-    "email": "user@gmail.com",
+    "email": "user2@gmail.com",
+    "password":"password"
+}
+
+### Create new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "user3@gmail.com",
     "password":"password",
     "test":"test"
 }
 
+### Get current user
+GET http://localhost:3000/auth/current-user
+
+### Logout
+POST  http://localhost:3000/auth/logout
+
 ### Get user
-GET http://localhost:3000/users/4
+GET http://localhost:3000/auth/4
 
 
 ### Get users by email
-GET http://localhost:3000/users?email=user@gmail.com
+GET http://localhost:3000/auth?email=user@gmail.com
 
 
 ### Remove user
-DELETE  http://localhost:3000/users/2
+DELETE  http://localhost:3000/auth/2
 
 ### Update user
-PATCH   http://localhost:3000/users/3
+PATCH   http://localhost:3000/auth/3
 Content-Type: application/json
 
 {
