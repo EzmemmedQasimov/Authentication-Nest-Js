@@ -1,0 +1,14 @@
+### Create report
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+    "price": 15000,
+    "make":"Mercedes",
+    "model":"W210",
+    "year":1998,
+    "lng":0,
+    "ltd":0,
+    "km":420000
+
+}
